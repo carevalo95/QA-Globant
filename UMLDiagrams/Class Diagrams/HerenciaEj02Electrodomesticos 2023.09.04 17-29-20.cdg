@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="HerenciaEj02Electrodomesticos">
+  <ClassDiagramComponents>
+    <Class name="G12_Ejercicio02" package="APP" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Electrodomestico" package="Entities" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="precio" type="Double" visibility="protected"/>
+        <Field name="color" type="Colores" visibility="protected"/>
+        <Field name="consumoEnergetico" type="char" visibility="protected"/>
+        <Field name="peso" type="Integer" visibility="protected"/>
+        <Field name="s" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Double" name="precio"/>
+          <Argument type="Colores" name="color"/>
+          <Argument type="char" name="consumoEnergetico"/>
+          <Argument type="Integer" name="peso"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPrecio" returnType="Double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="Double" name="precio"/>
+        </Method>
+        <Method name="getColor" returnType="Colores" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="Colores" name="color"/>
+        </Method>
+        <Method name="getConsumoEnergetico" returnType="char" visibility="public"/>
+        <Method name="setConsumoEnergetico" returnType="void" visibility="public">
+          <Argument type="char" name="consumoEnergetico"/>
+        </Method>
+        <Method name="getPeso" returnType="Integer" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="Integer" name="peso"/>
+        </Method>
+        <Method name="comprobarConsumoEnergetico" returnType="char" visibility="public">
+          <Argument type="char" name="letra"/>
+        </Method>
+        <Method name="comprobarColor" returnType="String" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="crearElectrodomestico" returnType="void" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Lavadora" package="Entities" visibility="public" xPosition="309.0" yPosition="515.0">
+      <Fields>
+        <Field name="carga" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="crearLavadora" returnType="void" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Televisor" package="Entities" visibility="public" xPosition="617.0" yPosition="515.0">
+      <Fields>
+        <Field name="resolucion" type="Double" visibility="private"/>
+        <Field name="TDT" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="crearTelevisor" returnType="void" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Colores" package="Enums" visibility="public" xPosition="918.0" yPosition="73.0">
+      <Literals>
+        <Literal name="BLANCO"/>
+        <Literal name="NEGRO"/>
+        <Literal name="ROJO"/>
+        <Literal name="AZUL"/>
+        <Literal name="GRIS"/>
+      </Literals>
+    </Enum>
+    <Enum name="Consumo" package="Enums" visibility="public" xPosition="918.0" yPosition="316.0">
+      <Literals>
+        <Literal name="A"/>
+        <Literal name="B"/>
+        <Literal name="C"/>
+        <Literal name="D"/>
+        <Literal name="E"/>
+        <Literal name="F"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entities.Electrodomestico" target="Enums.Colores" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entities.Lavadora" target="Entities.Electrodomestico"/>
+    <HasRelation name="color" source="Entities.Electrodomestico" target="Enums.Colores" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entities.Televisor" target="Entities.Electrodomestico"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

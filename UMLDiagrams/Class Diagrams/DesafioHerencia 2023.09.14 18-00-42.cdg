@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DesafioHerencia">
+  <ClassDiagramComponents>
+    <Class name="AbordajeNutricional" package="desafioherencia" visibility="public" xPosition="1849.0" yPosition="970.0">
+      <Fields>
+        <Field name="numOrden" type="Integer" visibility="protected"/>
+        <Field name="peso" type="Double" visibility="protected"/>
+        <Field name="eutrofico" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="numOrden"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="Double" name="peso"/>
+          <Argument type="boolean" name="eutrofico"/>
+          <Argument type="boolean" name="bajoPeso"/>
+          <Argument type="boolean" name="sobrePeso"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Adulto" package="desafioherencia" visibility="public" xPosition="1962.0" yPosition="1300.0">
+      <Fields>
+        <Field name="obraSocial" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="obraSocial"/>
+          <Argument type="Integer" name="numOrden"/>
+          <Argument type="Persona" name="vinculo"/>
+          <Argument type="ProblemaDeSalud" name="probDeSalud"/>
+          <Argument type="AbordajeNutricional" name="abordajeNut"/>
+          <Argument type="boolean" name="tieneProbSalud"/>
+          <Argument type="boolean" name="tieneAbordajeNut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="Date" name="fechaNacimiento"/>
+          <Argument type="Integer" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isObraSocial" returnType="boolean" visibility="public"/>
+        <Method name="setObraSocial" returnType="void" visibility="public">
+          <Argument type="boolean" name="obraSocial"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AdultoMayor" package="desafioherencia" visibility="public" xPosition="2120.0" yPosition="1300.0">
+      <Fields>
+        <Field name="jubilacion" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="jubilacion"/>
+          <Argument type="Integer" name="numOrden"/>
+          <Argument type="Persona" name="vinculo"/>
+          <Argument type="ProblemaDeSalud" name="probDeSalud"/>
+          <Argument type="AbordajeNutricional" name="abordajeNut"/>
+          <Argument type="boolean" name="tieneProbSalud"/>
+          <Argument type="boolean" name="tieneAbordajeNut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="Date" name="fechaNacimiento"/>
+          <Argument type="Integer" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DesafioHerencia" package="desafioherencia" visibility="public" xPosition="1568.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Familia" package="desafioherencia" visibility="public" xPosition="1520.0" yPosition="136.0">
+      <Fields>
+        <Field name="direccion" type="String" visibility="protected"/>
+        <Field name="IDE" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="localidad"/>
+          <Argument type="String" name="barrio"/>
+          <Argument type="Integer" name="IDE"/>
+          <Argument type="Integer" name="numLote"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getLocalidad" returnType="String" visibility="public"/>
+        <Method name="setLocalidad" returnType="void" visibility="public">
+          <Argument type="String" name="localidad"/>
+        </Method>
+        <Method name="getBarrio" returnType="String" visibility="public"/>
+        <Method name="setBarrio" returnType="void" visibility="public">
+          <Argument type="String" name="barrio"/>
+        </Method>
+        <Method name="getIDE" returnType="Integer" visibility="public"/>
+        <Method name="setIDE" returnType="void" visibility="public">
+          <Argument type="Integer" name="IDE"/>
+        </Method>
+        <Method name="getNumLote" returnType="Integer" visibility="public"/>
+        <Method name="setNumLote" returnType="void" visibility="public">
+          <Argument type="Integer" name="numLote"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hospital" package="desafioherencia" visibility="public" xPosition="1831.0" yPosition="30.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Integrante" package="desafioherencia" visibility="public" xPosition="1413.0" yPosition="642.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="numOrden" type="Integer" visibility="protected"/>
+        <Field name="vinculo" type="Persona" visibility="protected"/>
+        <Field name="probDeSalud" type="ProblemaDeSalud" visibility="protected"/>
+        <Field name="abordajeNut" type="AbordajeNutricional" visibility="protected"/>
+        <Field name="tieneProbSalud" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="numOrden"/>
+          <Argument type="Persona" name="vinculo"/>
+          <Argument type="ProblemaDeSalud" name="probDeSalud"/>
+          <Argument type="AbordajeNutricional" name="abordajeNut"/>
+          <Argument type="boolean" name="tieneProbSalud"/>
+          <Argument type="boolean" name="tieneAbordajeNut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="Date" name="fechaNacimiento"/>
+          <Argument type="Integer" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumOrden" returnType="Integer" visibility="public"/>
+        <Method name="setNumOrden" returnType="void" visibility="public">
+          <Argument type="Integer" name="numOrden"/>
+        </Method>
+        <Method name="getVinculo" returnType="Persona" visibility="public"/>
+        <Method name="setVinculo" returnType="void" visibility="public">
+          <Argument type="Persona" name="vinculo"/>
+        </Method>
+        <Method name="isTieneProbSalud" returnType="boolean" visibility="public"/>
+        <Method name="setTieneProbSalud" returnType="void" visibility="public">
+          <Argument type="boolean" name="tieneProbSalud"/>
+        </Method>
+        <Method name="isTieneAbordajeNut" returnType="boolean" visibility="public"/>
+        <Method name="setTieneAbordajeNut" returnType="void" visibility="public">
+          <Argument type="boolean" name="tieneAbordajeNut"/>
+        </Method>
+        <Method name="cargarProb" returnType="void" visibility="private"/>
+        <Method name="cargarProbSalud" returnType="ProblemaDeSalud" visibility="public"/>
+        <Method name="cargarAbordajeNut" returnType="AbordajeNutricional" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Joven" package="desafioherencia" visibility="public" xPosition="1306.0" yPosition="1232.0">
+      <Fields>
+        <Field name="estudia" type="boolean" visibility="protected"/>
+        <Field name="deQueTrabaja" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="estudia"/>
+          <Argument type="boolean" name="haceDeporte"/>
+          <Argument type="boolean" name="trabaja"/>
+          <Argument type="String" name="deQueTrabaja"/>
+          <Argument type="Integer" name="numOrden"/>
+          <Argument type="Persona" name="vinculo"/>
+          <Argument type="ProblemaDeSalud" name="probDeSalud"/>
+          <Argument type="AbordajeNutricional" name="abordajeNut"/>
+          <Argument type="boolean" name="tieneProbSalud"/>
+          <Argument type="boolean" name="tieneAbordajeNut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="Date" name="fechaNacimiento"/>
+          <Argument type="Integer" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isEstudia" returnType="boolean" visibility="public"/>
+        <Method name="setEstudia" returnType="void" visibility="public">
+          <Argument type="boolean" name="estudia"/>
+        </Method>
+        <Method name="isHaceDeporte" returnType="boolean" visibility="public"/>
+        <Method name="setHaceDeporte" returnType="void" visibility="public">
+          <Argument type="boolean" name="haceDeporte"/>
+        </Method>
+        <Method name="isTrabaja" returnType="boolean" visibility="public"/>
+        <Method name="setTrabaja" returnType="void" visibility="public">
+          <Argument type="boolean" name="trabaja"/>
+        </Method>
+        <Method name="getDeQueTrabaja" returnType="String" visibility="public"/>
+        <Method name="setDeQueTrabaja" returnType="void" visibility="public">
+          <Argument type="String" name="deQueTrabaja"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ninio" package="desafioherencia" visibility="public" xPosition="2343.0" yPosition="1300.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="numOrden"/>
+          <Argument type="Persona" name="vinculo"/>
+          <Argument type="ProblemaDeSalud" name="probDeSalud"/>
+          <Argument type="AbordajeNutricional" name="abordajeNut"/>
+          <Argument type="boolean" name="tieneProbSalud"/>
+          <Argument type="boolean" name="tieneAbordajeNut"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="Date" name="fechaNacimiento"/>
+          <Argument type="Integer" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="desafioherencia" visibility="public" isAbstract="true" xPosition="2269.0" yPosition="136.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="peso" type="Double" visibility="protected"/>
+        <Field name="fechaNacimiento" type="Date" visibility="protected"/>
+        <Field name="dni" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="sexo"/>
+          <Argument type="Date" name="fechaNacimiento"/>
+          <Argument type="Integer" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getSexo" returnType="String" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="String" name="sexo"/>
+        </Method>
+        <Method name="getFechaNacimiento" returnType="Date" visibility="public"/>
+        <Method name="setFechaNacimiento" returnType="void" visibility="public">
+          <Argument type="Date" name="fechaNacimiento"/>
+        </Method>
+        <Method name="getDni" returnType="Integer" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="Integer" name="dni"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProblemaDeSalud" package="desafioherencia" visibility="public" xPosition="1849.0" yPosition="693.0">
+      <Fields>
+        <Field name="numOrden" type="Integer" visibility="protected"/>
+        <Field name="HTA" type="boolean" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="numOrden"/>
+          <Argument type="Integer" name="IDEFamilia"/>
+          <Argument type="boolean" name="HTA"/>
+          <Argument type="boolean" name="DBT"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="desafioherencia.Integrante" target="desafioherencia.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="abordajeNut" source="desafioherencia.Integrante" target="desafioherencia.AbordajeNutricional" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="desafioherencia.Integrante" target="desafioherencia.AbordajeNutricional" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="desafioherencia.Joven" target="desafioherencia.Integrante"/>
+    <IsRelation name="is" source="desafioherencia.Ninio" target="desafioherencia.Integrante"/>
+    <IsRelation name="is" source="desafioherencia.Integrante" target="desafioherencia.Persona"/>
+    <IsRelation name="is" source="desafioherencia.Adulto" target="desafioherencia.Integrante"/>
+    <HasRelation name="probDeSalud" source="desafioherencia.Integrante" target="desafioherencia.ProblemaDeSalud" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vinculo" source="desafioherencia.Integrante" target="desafioherencia.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="desafioherencia.Integrante" target="desafioherencia.ProblemaDeSalud" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="desafioherencia.AdultoMayor" target="desafioherencia.Integrante"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
