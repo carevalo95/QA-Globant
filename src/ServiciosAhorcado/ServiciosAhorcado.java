@@ -115,6 +115,7 @@ public class ServiciosAhorcado {
                 }
             }
             System.out.print("Así vamos: ");mostrarProgreso(copia);
+            System.out.println("_________________________________");
         } while (ah.getCantJugadasMax() > 0 && !logrado);
         if (ah.getCantJugadasMax() == 0) {
             System.out.println("!Ahorcado!");
