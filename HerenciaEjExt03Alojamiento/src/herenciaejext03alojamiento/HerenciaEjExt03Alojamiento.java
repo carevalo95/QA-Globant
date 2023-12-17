@@ -5,7 +5,9 @@
  */
 package herenciaejext03alojamiento;
 
-import Ejercicio3ExtraAlojamiento.Entidades.*;
+import Entidades.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *

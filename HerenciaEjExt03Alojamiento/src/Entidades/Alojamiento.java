@@ -1,4 +1,4 @@
-package herenciaejext03alojamiento.Entidades;
+package Entidades;
 
 public  abstract class Alojamiento {
 	protected String name, direccion, gerente, localidad;

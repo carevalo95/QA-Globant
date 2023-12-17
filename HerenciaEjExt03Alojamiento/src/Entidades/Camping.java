@@ -1,4 +1,4 @@
-package Herenciaejext03alojamiento.Entidades;
+package Entidades;
 
 public class Camping extends ExtraHotelero {
 

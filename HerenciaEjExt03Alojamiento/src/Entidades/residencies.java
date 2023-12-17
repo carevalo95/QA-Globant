@@ -1,4 +1,4 @@
-package Ejercicio3ExtraAlojamiento.Entidades;
+package Entidades;
 
 public class residencies extends ExtraHotelero {
 
